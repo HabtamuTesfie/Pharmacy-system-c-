@@ -8,24 +8,26 @@ using namespace std;
 
 struct node
 {
-         int id;
-		 char name[50];
-		 float price,dis;
-		 int quant;
-		 node*next;
-		 float expired_day,expired_month,expired_year;
+    int id;
+	char name[50];
+	float price,dis;
+	int quant;
+	node*next;
+	float expired_day,expired_month,expired_year;
 };
-struct drug{
-         int Id;
-		 char nam[50];
-		 float pric,diss;
-		int quantt;
-		float expired_day1,expired_month1,expired_year1;	
+struct drug
+{
+    int Id;
+	char nam[50];
+	float pric,diss;
+	int quantt;
+	float expired_day1,expired_month1,expired_year1;	
 };
 drug pr;
 int x,aa,c=0, co=0;
 float afterdis,total=0;
-void password(int);//function decleration prototype
+//function decleration prototype
+void password(int);
 void introduction();
 void admin();
 void insertdrug();
@@ -50,53 +52,51 @@ node*start=NULL;
 int n;
 void introduction()
 {
-    cout<<endl<<endl<<endl<<endl;
-cout<<"||<-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><||"<<endl;
-cout<<"||\t                                                          ||"<<endl;
-cout<<"||\tUNIVERSITY OF GONDAR                                      ||"<<endl;
-cout<<"||\tCOLLEGUE OF MEDICINE AND HEALTH SCIENCE                   ||"<<endl;
-cout<<"||\tDEPARTMENT OF HEALTH INFORMATICS                          ||"<<endl;
-cout<<"||\tSTUDENT PROJECT                                           ||"<<endl;
-cout<<"||\tABOUT DRUG INFORMATION MANNEGEMENT SYSTEM                 ||"<<endl;
-cout<<"||\t\tDATA STRUCTURE AND ALGORITHM                      ||"<<endl;
-cout<<"||\t                                                          ||"<<endl;
-cout<<"||<-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><||"<<endl<<endl<<endl;
+  cout<<endl<<endl<<endl<<endl;
+  cout<<"||<-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><||"<<endl;
+  cout<<"||\t                                                          ||"<<endl;
+  cout<<"||\tUNIVERSITY OF GONDAR                                      ||"<<endl;
+  cout<<"||\tCOLLEGUE OF MEDICINE AND HEALTH SCIENCE                   ||"<<endl;
+  cout<<"||\tDEPARTMENT OF HEALTH INFORMATICS                          ||"<<endl;
+  cout<<"||\tSTUDENT PROJECT                                           ||"<<endl;
+  cout<<"||\tABOUT DRUG INFORMATION MANNEGEMENT SYSTEM                 ||"<<endl;
+  cout<<"||\t\tDATA STRUCTURE AND ALGORITHM                      ||"<<endl;
+  cout<<"||\t                                                          ||"<<endl;
+  cout<<"||<-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><||"<<endl<<endl<<endl;
 
-cout<<"____________________________________________________________________\n"<<endl;
-cout<<"\t\t\t    GROUP MEMBERS\t\t                                        "<<endl;;
-cout<<"\t\t NAME \t\t\t\t\t ID NUMBER \t\t\t\t\t\t                        "<<endl;
-cout<<"|\t 1. HABTAMU TESFIE.................................03941/10      |\n";
-cout<<"|\t 2. MELIKAM ALEBIA.................................04001/10      |\n";
-cout<<"|\t 3. HENOK WULETAW .................................03990/10      |\n";
-cout<<"|\t 4. ALEMSHET ASHAGRIE..............................03975/10      |\n";
-cout<<"|\t 5.DAWIT BEKELE....................................03997/10      |\n";
-cout<<"|\t 6. YINGESU FENTAHUN................................03947/10     |\n";
-cout<<"|________________________________________________________________________|"<<endl;
-cout<<"\t\t\t\t\tSUBMITTED TO :MIFTAHA"<<endl;
-cout<<"\t\t\t\t\tSUBMISSION DATE: JAUNARY 24,2012 E.C"<<endl;
-cout<<"\t\t\t\t\tGONDAR,ETHIOPIA"<<endl;
-cout<<endl;
-cout<<"\t\tWELCOME TO UNIVERSITY OF GONDAR HOSPITAL\n";
+  cout<<"____________________________________________________________________\n"<<endl;
+  cout<<"\t\t\t    GROUP MEMBERS\t\t                                        "<<endl;;
+  cout<<"\t\t NAME \t\t\t\t\t ID NUMBER \t\t\t\t\t\t                        "<<endl;
+  cout<<"|\t  HABTAMU TESFIE.................................03941/10      |\n";
+  cout<<"|________________________________________________________________________|"<<endl;
+  cout<<"\t\t\t\t\tSUBMITTED TO :MIFTAHA"<<endl;
+  cout<<"\t\t\t\t\tSUBMISSION DATE: JAUNARY 24,2012 E.C"<<endl;
+  cout<<"\t\t\t\t\tGONDAR,ETHIOPIA"<<endl;
+  cout<<endl;
+  cout<<"\t\tWELCOME TO UNIVERSITY OF GONDAR HOSPITAL\n";
 }
 
 void password(int n)
 {
-int c=1234,z;
-co++;
- if( co<=3)
+  int c=1234,z;
+  co++;
+  if( co<=3)
    {
-               if(n==c)
-cout<<"\nYOU ARE LOGGED IN \n\n";
-    else if(( co<=3)&&(c!=n))  
-	{
-cout<<"\nTRY THE CORRECT PASSWORD\n\n";
-cin>>z;
-     password(z);
-   }
+      if(n==c)
+        cout<<"\nYOU ARE LOGGED IN \n\n";
+      else if(( co<=3)&&(c!=n))  
+	  {
+      cout<<"\nTRY THE CORRECT PASSWORD\n\n";
+      cin>>z;
+
+	  // the password function called
+      password(z);
+
+      }
    }
    else 
    {
-    cout<<"\tI GIVE YOU THREE CHANCE  BUT YOU DIDN'T BE ABEL ENTER  CORRECT PASSWARED";
+      cout<<"\tI GIVE YOU THREE CHANCE  BUT YOU DIDN'T BE ABEL ENTER  CORRECT PASSWARED";
 	  cout<<"SO TRY LATTER\n";
 
    }
@@ -204,7 +204,7 @@ cout<<"\t\t D. DELETE  DRUG FROM THE FILE PERMANETLY         \n";
 	 else if(c=='C')
   {
   cout<<"please enter the position you want to delete the drug";
-cin>>m;	
+  cin>>m;	
   delete_pos(m);
   admin();
 	}
@@ -1016,16 +1016,4 @@ cout<<"\t****************************************************************\n";
 		 return 0;
 }	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
 
