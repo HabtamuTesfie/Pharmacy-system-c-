@@ -8,7 +8,7 @@ using namespace std;
 
 struct node
 {
-    int id;
+        int id;
 	char name[50];
 	float price,dis;
 	int quant;
@@ -17,7 +17,7 @@ struct node
 };
 struct drug
 {
-    int Id;
+        int Id;
 	char nam[50];
 	float pric,diss;
 	int quantt;
