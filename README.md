@@ -1,2 +1,2 @@
-# Pharmacy-ystem(C plus-plus)
+# Pharmacy system application using C++ 
  
